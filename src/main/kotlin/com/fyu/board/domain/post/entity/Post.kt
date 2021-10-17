@@ -17,6 +17,6 @@ class Post(
 
     private val contents: String,
 
-    private val views: Int
+    private val views: Int = 0
 
-): BaseTimeEntity()
+) : BaseTimeEntity()
