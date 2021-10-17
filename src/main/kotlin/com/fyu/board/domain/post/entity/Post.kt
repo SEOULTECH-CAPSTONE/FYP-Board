@@ -1,5 +1,6 @@
 package com.fyu.board.domain.post.entity
 
+import com.fyu.board.domain.global.entity.BaseTimeEntity
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
@@ -16,6 +17,6 @@ class Post(
 
     private val contents: String,
 
-    private val views: Int,
+    private val views: Int
 
-)
+): BaseTimeEntity()
