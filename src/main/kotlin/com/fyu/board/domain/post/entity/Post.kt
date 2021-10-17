@@ -1,6 +1,8 @@
 package com.fyu.board.domain.post.entity
 
 import com.fyu.board.domain.global.entity.BaseTimeEntity
+import com.fyu.board.domain.post.dto.request.CreatePostReqDto
+import com.fyu.board.domain.post.dto.response.PostResDto
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
@@ -19,4 +21,7 @@ class Post(
 
     private val views: Int = 0
 
-) : BaseTimeEntity()
+) : BaseTimeEntity() {
+
+    fun from(post: Post) = PostResDto(id, title, contents, views)
+}
